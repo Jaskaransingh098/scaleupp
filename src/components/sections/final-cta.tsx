@@ -32,7 +32,10 @@ const FinalCtaSection = () => {
             Stop posting.
           </h1>
           <h1 className="text-[50px] font-semibold leading-[60px] text-center whitespace-nowrap">
-            <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold">
+            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold" style={{
+                      fontFamily: "Times New Roman, serif",
+                      fontStyle: "italic",
+                    }}>
               Start selling.
             </span>
           </h1>

@@ -41,16 +41,6 @@ const gridItems = [
 const ResultsShowcase = () => {
   return (
     <section className="relative isolate z-20 p-10 lg:py-32 w-[93vw] mx-auto rounded-4xl overflow-hidden min-h-[600px]">
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/pics-bg1.mp4" type="video/mp4" />
-      </video>
-
       {/* Overlay to make content readable */}
       <div className="absolute inset-0 bg-gray-900 rounded-4xl z-10"></div>
 
@@ -58,22 +48,28 @@ const ResultsShowcase = () => {
         <div className="text-center mb-12 lg:mb-20">
           <h2 className="text-4xl lg:text-[48px] lg:leading-[56px] font-semibold text-white">
             We Actually{" "}
-            <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold">
+            <span
+              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold"
+              style={{
+                fontFamily: "Times New Roman, serif",
+                fontStyle: "italic",
+              }}
+            >
               Get Results
             </span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-auto gap-6 [grid-auto-flow:dense]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-auto gap-4 [grid-auto-flow:dense]">
           {gridItems.map((item, index) => (
             <div key={index} className={item.className}>
               <Image
                 src={item.src}
                 alt=""
-                width={700}
+                width={800}
                 height={700}
                 unoptimized
-                className="w-[80vw] mx-auto h-auto rounded-4xl p-5 border-2 border-white/20 bg-white/0 backdrop-blur-sm shadow-sm"
+                className="w-full mx-auto h-auto rounded-4xl p-2 border-2 border-white/20 bg-white/0 backdrop-blur-sm shadow-sm"
               />
             </div>
           ))}

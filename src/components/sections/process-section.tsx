@@ -138,7 +138,10 @@ const ProcessSection = () => {
         >
           <h2 className="text-center text-[48px] font-light leading-[56px] text-foreground max-w-3xl">
             Four steps,{" "}
-            <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-light">
+            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent px-3 font-light" style={{
+                      fontFamily: "Times New Roman, serif",
+                      fontStyle: "italic",
+                    }}>
               No fluff
             </span>
           </h2>

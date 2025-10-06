@@ -194,6 +194,7 @@
     font-weight: var(--font-weight-hero-heading);
     letter-spacing: var(--tracking-hero-heading);
     color: var(--color-text-primary);
+    font-family: "Space Grotesk";
   }
 
   h2 {
@@ -201,6 +202,7 @@
     line-height: var(--leading-section-heading);
     font-weight: var(--font-weight-section-heading);
     color: var(--color-text-primary);
+    font-family: "Space Grotesk";
   }
 
   h3 {
@@ -208,13 +210,17 @@
     line-height: var(--leading-subheading);
     font-weight: var(--font-weight-subheading);
     color: var(--color-text-primary);
+    font-family: "Space Grotesk";
   }
 
   p {
     font-size: var(--font-body-regular);
     line-height: var(--leading-body-regular);
-    font-weight: var(--font-weight-body);
+    /* font-weight: var(--font-weight-body); */
     color: var(--color-text-secondary);
+    /* font-family: "Lora"; */
+    font-weight: lighter;
+    
   }
 
   .text-lg {
@@ -275,16 +281,17 @@ nextjs-portal {
 }
 
 @keyframes diagonal-loop {
-  0% {
+  from {
     transform: translate(0, 0);
   }
 
-  100% {
-    transform: translate(60px, 60px);
-    /* shift diagonally right + down */
+  to {
+    transform: translate(50%, 50%);
   }
 }
 
 .animate-diagonal-loop {
-  animation: diagonal-loop 3s linear infinite;
+  animation: diagonal-loop 120s linear infinite;
+  will-change: transform;
 }
+

@@ -14,8 +14,8 @@ export default function StarfieldBackground() {
 
   useEffect(() => {
     const newStars: Star[] = [];
-    const cols = 40;
-    const rows = 25;
+    const cols = 50;
+    const rows = 35;
     const spacingX = 100 / (cols - 1);
     const spacingY = 100 / (rows - 1);
 
@@ -25,7 +25,7 @@ export default function StarfieldBackground() {
           id: row * cols + col,
           x: col * spacingX,
           y: row * spacingY,
-          size: 2,
+          size: 1,
         });
       }
     }
@@ -48,7 +48,7 @@ export default function StarfieldBackground() {
                 top: `${star.y}%`,
                 width: `${star.size}px`,
                 height: `${star.size}px`,
-                opacity: 0.8,
+                opacity: 0.3,
               }}
             />
           ))}

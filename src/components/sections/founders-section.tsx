@@ -32,7 +32,7 @@ const card2Data = {
   description:
     "Waleed has spent the past years building content systems end-to-end for agencies, founders, and consultants. From scripting to editing to scaling funnels, he’s refined the exact process that consistently drives inbound leads. At Aevo Media Labs, he focuses on strategy and growth — making sure every piece of content leads to qualified calls, not vanity metrics.",
   imageUrl:
-    "/maddy.png",
+    "/waleed2.png",
 };
 
 const SocialIcon: React.FC<SocialItem> = ({ icon: Icon, href, name }) => (
@@ -50,7 +50,7 @@ const SocialIcon: React.FC<SocialItem> = ({ icon: Icon, href, name }) => (
 
 export default function FoundersSection() {
   return (
-    <section id="founders" className="relative py-[100px] bg- overflow-hidden">
+    <section id="founders" className="relative py-[100px] bg-transparent overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-10">
         {/* <Image
           src="https://framerusercontent.com/images/XBtz1phaWuFmJnHyQtKgezPJHUU.png"
@@ -76,7 +76,10 @@ export default function FoundersSection() {
           >
             <h2 className="text-[48px] font-semibold text-text-primary leading-[56px]">
               Meet our{" "}
-              <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold">
+              <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold" style={{
+                      fontFamily: "Times New Roman, serif",
+                      fontStyle: "italic",
+                    }}>
                 Founders
               </span>
             </h2>

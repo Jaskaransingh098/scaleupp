@@ -107,8 +107,8 @@ export default function Footer() {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
         {/* Logo */}
         <div className="mb-12 flex items-center gap-3">
-          <div className="w-50 h-30 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center">
-            <img src="/logo-madhav.jpg" alt="" />
+          <div className="w-50 h-30 rounded-3xl bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center">
+            <img src="/logo-madhav.jpg" alt="" className="rounded-3xl" />
           </div>
           {/* <span className="text-white text-2xl font-bold">Scaleup Media</span> */}
         </div>
@@ -124,7 +124,7 @@ export default function Footer() {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link href="#contact" className="px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white">
+          <Link href="#contact" className="px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all bg-[linear-gradient(to_right,#d38312,#a83279)] text-white">
             Contact Us
             <ArrowRight className="w-5 h-5" />
           </Link>

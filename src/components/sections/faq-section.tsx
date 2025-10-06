@@ -57,7 +57,10 @@ const FaqSection = () => {
           >
             <h2 className="text-4xl md:text-5xl font-semibold text-text-primary leading-tight">
               Frequently Asked{" "}
-              <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold">
+              <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold" style={{
+                      fontFamily: "Times New Roman, serif",
+                      fontStyle: "italic",
+                    }}>
                 Questions
               </span>
             </h2>

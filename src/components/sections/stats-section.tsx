@@ -95,7 +95,7 @@ const StatsSection = () => {
         >
           <h2 className="text-5xl font-light text-text-primary">
             Why{" "}
-            <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-light">
+            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-light" style={{fontFamily:"Roman", fontStyle:"italic"}}>
               Choose us?
             </span>
           </h2>

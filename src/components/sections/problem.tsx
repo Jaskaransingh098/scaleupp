@@ -21,11 +21,11 @@ function DarkGradientBg({ children, className }: DarkGradientBgProps) {
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 opacity-100"
-        //   style={{
-        //     background:
-        //       "radial-gradient(100% 100% at 0% 0%, rgb(46, 46, 46) 0%, rgb(0, 0, 0) 100%)",
-        //     mask: "radial-gradient(125% 100% at 0% 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.224) 88.2883%, rgba(0, 0, 0, 0) 100%)",
-        //   }}
+          //   style={{
+          //     background:
+          //       "radial-gradient(100% 100% at 0% 0%, rgb(46, 46, 46) 0%, rgb(0, 0, 0) 100%)",
+          //     mask: "radial-gradient(125% 100% at 0% 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.224) 88.2883%, rgba(0, 0, 0, 0) 100%)",
+          //   }}
         >
           <div
             className="absolute inset-0 opacity-20"
@@ -113,122 +113,131 @@ function ContentClientsSection() {
 
   return (
     // <DarkGradientBg>
-      <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-7xl">
-          <section className="relative py-0 md:py-32">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeIn}
-              className="relative z-10"
-            >
-              <div className="max-w-5xl mx-auto">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 mb-8"
-                >
-                  {/* <Sparkles className="h-4 w-4 text-cyan-400" /> */}
-                  <span className="text-sm font-medium text-white">
-                    The Problem
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl">
+        <section className="relative py-0 md:py-32">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeIn}
+            className="relative z-10"
+          >
+            <div className="max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 mb-8"
+              >
+                {/* <Sparkles className="h-4 w-4 text-cyan-400" /> */}
+                <span className="text-sm font-medium text-white">
+                  The Problem
+                </span>
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0 }}
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] tracking-tight"
+              >
+                <span className="text-white font-bold">
+                  Content ≠{" "}
+                  <span
+                    className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold px-4 inline-block"
+                    style={{
+                      fontFamily: "Times New Roman, serif",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    Client
                   </span>
-                </motion.div>
+                </span>
+              </motion.h1>
 
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] tracking-tight"
-                >
-                  <span className="text-white font-bold">
-                    Content ≠ <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold">Client</span>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="space-y-6 mb-12"
+              >
+                <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 leading-relaxed font-light">
+                  Most founders grind out videos, hire editors, chase trends…
+                  and still have an{" "}
+                  <span className="text-white font-medium relative inline-block">
+                    empty calendar
+                    {/* <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></span> */}
                   </span>
-                </motion.h1>
+                  .
+                </p>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.4 }}
-                  className="space-y-6 mb-12"
-                >
-                  <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 leading-relaxed font-light">
-                    Most founders grind out videos, hire editors, chase trends…
-                    and still have an{" "}
-                    <span className="text-white font-medium relative inline-block">
-                      empty calendar
-                      {/* <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></span> */}
-                    </span>
-                    .
-                  </p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 leading-relaxed font-light">
+                  The missing piece isn't effort — it's a{" "}
+                  <span className="text-[#fcb045] font-medium">system</span>{" "}
+                  that makes content{" "}
+                  <span className="text-white font-semibold relative inline-block">
+                    sell
+                    <motion.span
+                      className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full"
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                    />
+                  </span>
+                  .
+                </p>
+              </motion.div>
 
-                  <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 leading-relaxed font-light">
-                    The missing piece isn't effort — it's a{" "}
-                    <span className="text-[#fcb045] font-medium">system</span>{" "}
-                    that makes content{" "}
-                    <span className="text-white font-semibold relative inline-block">
-                      sell
-                      <motion.span
-                        className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full"
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                      />
-                    </span>
-                    .
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
-                >
-                  {[
-                    {
-                      icon: <TrendingUp className="h-6 w-6 " />,
-                      label: "Effort Without Results",
-                      value: "Endless grind",
-                    },
-                    {
-                      icon: <Calendar className="h-6 w-6" />,
-                      label: "Empty Calendars",
-                      value: "No bookings",
-                    },
-                    {
-                      icon: <Users className="h-6 w-6" />,
-                      label: "Missing Clients",
-                      value: "Zero conversions",
-                    },
-                  ].map((stat, index) => (
-                    <motion.div
-                      key={stat.label}
-                      variants={itemFadeIn}
-                      whileHover={{ y: -5, scale: 1.02 }}
-                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 hover:bg-white/10 transition-all duration-300"
-                    >
-                      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-all duration-300 blur-2xl"></div>
-                      <div className="relative space-y-3">
-                        <div className="flex items-center gap-3">
-                          <div className="rounded-lg bg-cyan-500/10 p-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]">
-                            {stat.icon}
-                          </div>
-                          <span className="text-sm font-medium text-gray-400">
-                            {stat.label}
-                          </span>
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+              >
+                {[
+                  {
+                    icon: <TrendingUp className="h-6 w-6 " />,
+                    label: "Effort Without Results",
+                    value: "Endless grind",
+                  },
+                  {
+                    icon: <Calendar className="h-6 w-6" />,
+                    label: "Empty Calendars",
+                    value: "No bookings",
+                  },
+                  {
+                    icon: <Users className="h-6 w-6" />,
+                    label: "Missing Clients",
+                    value: "Zero conversions",
+                  },
+                ].map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    variants={itemFadeIn}
+                    whileHover={{ y: -5, scale: 1.02 }}
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-all duration-300 blur-2xl"></div>
+                    <div className="relative space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="rounded-lg bg-cyan-500/10 p-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]">
+                          {stat.icon}
                         </div>
-                        <div className="text-2xl font-bold text-white">
-                          {stat.value}
-                        </div>
+                        <span className="text-sm font-medium text-gray-400">
+                          {stat.label}
+                        </span>
                       </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
+                      <div className="text-2xl font-bold text-white">
+                        {stat.value}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
 
-                {/* <motion.div
+              {/* <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.8 }}
@@ -255,7 +264,7 @@ function ContentClientsSection() {
                   </motion.button>
                 </motion.div> */}
 
-                {/* <motion.div
+              {/* <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.7, delay: 1 }}
@@ -280,13 +289,13 @@ function ContentClientsSection() {
                     <span>Fill your calendar</span>
                   </div>
                 </motion.div> */}
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none" /> */}
-          </section>
-        </div>
+          {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none" /> */}
+        </section>
       </div>
+    </div>
     // </DarkGradientBg>
   );
 }

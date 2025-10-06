@@ -213,7 +213,7 @@ const HeroSection = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-[45px] font-light text-text-primary leading-tight tracking-[-0.02em] max-w-5xl">
               You don’t need “more content.” You need clients. That’s why we
               built - <br />{" "}
-              <span className="pt-2 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent">
+              <span className="pt-2 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent" style={{fontFamily:"Roman", fontStyle:"italic"}}>
                 The Social Selling System™
               </span>
               <span className="inline-flex items-center justify-center flex-wrap gap-x-10 gap-y-5 mt-10">
@@ -237,11 +237,11 @@ const HeroSection = () => {
                 ))}
                 <span className="font-light">
                   A{" "}
-                  <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent">
+                  <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent" style={{fontFamily:"Roman", fontStyle:"italic"}}>
                     plug-and-play
                   </span>{" "}
                   YouTube + short-form system that fills your calendar with{" "}
-                  <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent">
+                  <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent " style={{fontFamily:"Roman", fontStyle:"italic"}}>
                     ready-to-buy
                   </span>{" "}
                   leads.

@@ -60,7 +60,7 @@ export default function HeaderNavigation() {
               href="#contact"
               className="bg-gray-800 md:rounded-full shadow-lg px-8 py-4"
             >
-              <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold">
+              <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold" style={{fontFamily:"Roman", fontStyle:"italic"}}>
                 Apply To Work With Us
               </span>
             </a>
