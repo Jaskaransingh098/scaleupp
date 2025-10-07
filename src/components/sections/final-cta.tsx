@@ -39,7 +39,7 @@ const FinalCtaSection = () => {
               }}
             />
             <span
-              className="ml-6 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold italic"
+              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent text-[55px] font-bold italic"
               style={{ fontFamily: "Times New Roman, serif" }}
             >
               Start selling
@@ -67,8 +67,18 @@ const FinalCtaSection = () => {
           <div className="relative p-[1px] ">
             <div className="bg- rounded-[19px] p-10 flex flex-col items-center">
               <h2 className="text-[40px] font-semibold leading-[48px] text-text-primary text-center">
-                Get your free strategy audit
+                Get your{" "}
+                <span
+                  className="inline-block px-5 py-2 rounded-full 
+    bg-white/10 backdrop-blur-md border border-white/20 
+    shadow-[0_0_15px_rgba(255,255,255,0.1)] text-white"
+                >
+                  free strategy audit
+                </span>
               </h2>
+
+              
+
               <p className="mt-2.5 text-base text-secondary-foreground text-center">
                 And see how The Social Selling System™ can fill your calendar
                 in 111 days.

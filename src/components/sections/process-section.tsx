@@ -124,14 +124,15 @@ const ProcessSection = () => {
       {/* Overlay to make content readable */}
       <div className="absolute inset-0 bg- rounded-4xl z-10"></div>
       <div className="container relative z-10 flex flex-col items-center gap-6">
-        <div className="relative inline-flex items-center justify-center rounded-full border border-[rgba(107,163,255,0.2)]">
+        <div className="relative inline-flex items-center justify-center rounded-full ">
           {/* <Image
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/IJB1pgcBugatOTAc7yAHhqLQu0-7.svg?"
             alt="Heading Background"
             layout="fill"
             className="rounded-full object-cover"
           /> */}
-          <span className="relative border-2 border-amber-50 rounded-2xl z-10 py-2 px-4 text-base text-secondary-foreground">
+          <span className="relative   top-10 bg-[linear-gradient(to_right,rgba(211,131,18,0.3),rgba(168,50,121,0.3))] 
+               backdrop-blur-sm border border-white/30 shadow-md rounded-2xl z-10 py-2 px-4 text-base text-white">
             Process
           </span>
         </div>

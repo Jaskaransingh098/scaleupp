@@ -98,7 +98,7 @@ const PainPoints = () => {
                     <h3 className="text-2xl font-semibold text-text-primary leading-7">
                       {point.title}
                     </h3>
-                    <p className="text-text-secondary text-white">
+                    <p className="text-white">
                       {point.description}
                     </p>
                   </div>

@@ -48,7 +48,10 @@ const FaqSection = () => {
     <section id="faq" className="py-[120px] bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col items-center text-center gap-6">
-          <div className="border border-white/30 rounded-full py-2 px-4 inline-block">
+          <div
+            className="border border-white/30 rounded-full py-2 px-4 relative top-11 z-30 bg-[linear-gradient(to_right,rgba(211,131,18,0.3),rgba(168,50,121,0.3))] 
+               backdrop-blur-sm  inline-block"
+          >
             <p className="text-sm font-semibold text-white">FAQ’s</p>
           </div>
           <div
@@ -57,10 +60,13 @@ const FaqSection = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-text-primary leading-tight">
               Frequently Asked{" "}
-              <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold" style={{
-                      fontFamily: "Times New Roman, serif",
-                      fontStyle: "italic",
-                    }}>
+              <span
+                className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold"
+                style={{
+                  fontFamily: "Times New Roman, serif",
+                  fontStyle: "italic",
+                }}
+              >
                 Questions
               </span>
             </h2>

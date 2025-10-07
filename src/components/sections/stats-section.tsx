@@ -73,7 +73,7 @@ const StatsSection = () => {
   return (
     <section
       id="result-analytics"
-      className="w-full pt-32 px-6 overflow-x-hidden mt-[10px]"
+      className="w-full pt-32 px-6 overflow-x-hidden mt-[10px] "
     >
       <style>
         {`
@@ -88,8 +88,11 @@ const StatsSection = () => {
       </style>
       <div className="flex flex-col items-center text-center">
         {/* Top badge */}
-        <div className="bg-[rgba(53,58,82,0.4)] border border-border/50 rounded-full px-4 py-2 top-2">
-          <p className="text-lg text-text-secondary">Results & Analytics</p>
+        <div className="relative w-full flex justify-center ">
+          <div className="absolute -top-6 bg-[linear-gradient(to_right,rgba(211,131,18,0.3),rgba(168,50,121,0.3))] 
+               backdrop-blur-sm  z-30 border border-border/50 rounded-full px-4 py-2 shadow-lg">
+            <p className="text-lg text-text-secondary">Results & Analytics</p>
+          </div>
         </div>
 
         {/* Main heading */}
