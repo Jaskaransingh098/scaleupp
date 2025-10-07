@@ -42,14 +42,14 @@ const ResultsShowcase = () => {
   return (
     <section className="relative isolate z-20 p-10 lg:py-32 w-[93vw] mx-auto rounded-4xl overflow-hidden min-h-[600px]">
       {/* Overlay to make content readable */}
-      <div className="absolute inset-0 bg-gray-900 rounded-4xl z-10"></div>
+      <div className="absolute inset-0 rounded-4xl z-10"></div>
 
       <div className="relative z-20 container mx-auto px-6">
         <div className="text-center mb-12 lg:mb-20">
-          <h2 className="text-4xl lg:text-[48px] lg:leading-[56px] font-semibold text-white">
+          <h2 className="text-4xl lg:text-[48px] lg:leading-[56px] font-bold text-white">
             We Actually{" "}
             <span
-              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold"
+              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent text-6xl font-bold"
               style={{
                 fontFamily: "Times New Roman, serif",
                 fontStyle: "italic",

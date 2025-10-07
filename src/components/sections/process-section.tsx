@@ -54,7 +54,10 @@ interface ProcessCardProps {
 
 const ProcessCard = ({ step, icon, title, description }: ProcessCardProps) => {
   return (
-    <div className="relative z-20 flex flex-col rounded-3xl border border-border bg-card p-8 overflow-hidden">
+    <div
+      className="relative z-20 flex flex-col rounded-3xl border border-bord  bg-white/10 backdrop-blur-xl
+ p-8 overflow-hidden"
+    >
       <Image
         src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/Vy5fY5tvzYvO3kc3PMsfNrzzvDY-8.svg?"
         alt="Card Background"
@@ -68,8 +71,10 @@ const ProcessCard = ({ step, icon, title, description }: ProcessCardProps) => {
         height={40}
         className="absolute top-4 left-4"
       /> */}
-      <div className="absolute top-6 right-6 rounded-full bg-primary/10 px-3 py-1">
-        <p className="text-sm text-secondary-foreground">{step}</p>
+      <div className="absolute top-6 right-6 rounded-full px-3 py-1">
+        <p className="text-sm text-white bg-gradient-to-r via-[#d38312] to-[#a83279]  md:rounded-full px-5 py-1">
+          {step}
+        </p>
       </div>
 
       <div className="relative z-10 flex flex-col gap-6">
@@ -86,14 +91,12 @@ const ProcessCard = ({ step, icon, title, description }: ProcessCardProps) => {
             maskSize: "contain",
           }}
         />
-        <h3 className="text-2xl font-semibold text-foreground">{title}</h3>
+        <h3 className="text-6xl font-semibold text-foreground">{title}</h3>
         <ul className="flex flex-col gap-3">
           {description.map((item, index) => (
             <li key={index} className="flex items-start gap-2">
               <Check className="mt-1 h-5 w-5 flex-shrink-0 text-success-green" />
-              <span className="text-base leading-6 text-secondary-foreground">
-                {item}
-              </span>
+              <span className="text-base leading-6 text-white">{item}</span>
             </li>
           ))}
         </ul>
@@ -134,14 +137,17 @@ const ProcessSection = () => {
         </div>
         <div
           className=" bg-black/30 backdrop-blur-2xl border border-white/30 
-      rounded-4xl shadow-lg p-4"
+      rounded-full shadow-lg p-4"
         >
-          <h2 className="text-center text-[48px] font-light leading-[56px] text-foreground max-w-3xl">
+          <h2 className="text-center text-[48px] font-bold leading-[56px] text-foreground max-w-3xl">
             Four steps,{" "}
-            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent px-3 font-light" style={{
-                      fontFamily: "Times New Roman, serif",
-                      fontStyle: "italic",
-                    }}>
+            <span
+              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent px-3 font-bold"
+              style={{
+                fontFamily: "Times New Roman, serif",
+                fontStyle: "italic",
+              }}
+            >
               No fluff
             </span>
           </h2>

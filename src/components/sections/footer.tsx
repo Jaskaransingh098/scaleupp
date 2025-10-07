@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="relative min-h-screen bg-[#020B1F] overflow-hidden flex flex-col z-20">
+    <div className="relative min-h-screen overflow-hidden flex flex-col z-20">
       {/* 3D Perspective Grid Background */}
       <div className="absolute inset-0">
         <svg className="w-full h-full" preserveAspectRatio="none">
@@ -106,9 +106,9 @@ export default function Footer() {
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
         {/* Logo */}
-        <div className="mb-12 flex items-center gap-3">
-          <div className="w-50 h-30 rounded-3xl bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center">
-            <img src="/logo-madhav.jpg" alt="" className="rounded-3xl" />
+        <div className="mb-1 flex items-center gap-3">
+          <div className="w-90 h-auto  flex items-center justify-center">
+            <img src="/logo2.png" alt="" className="rounded-3xl" />
           </div>
           {/* <span className="text-white text-2xl font-bold">Scaleup Media</span> */}
         </div>

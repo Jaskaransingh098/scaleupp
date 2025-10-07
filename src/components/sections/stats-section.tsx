@@ -6,10 +6,10 @@ import CountUp from "react-countup";
 import WhyChart from "../ui/why-chart";
 
 const stats = [
-  { value: "3+", label: "Years Of Experience" },
-  { value: "₹8,399", label: "Revenue In Pipeline Generated" },
-  { value: "34,999+", label: "Organic Views Generated" },
-  { value: "1,999+", label: "Accumulated Client Followers" },
+  { value: "4+", label: "Years Of Experience" },
+  { value: "$306,999", label: "Revenue In Pipeline Generated" },
+  { value: "100 Millions", label: "Organic Views Generated" },
+  { value: "549,999", label: "Accumulated Client Followers" },
 ];
 
 const StatCard = ({ value, label }: { value: string; label: string }) => {
@@ -24,19 +24,20 @@ const StatCard = ({ value, label }: { value: string; label: string }) => {
           observer.disconnect(); // run only once
         }
       },
-      { threshold: 0.5 } // trigger when 50% visible
+      { threshold: 0.5 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
-  // extract only digits for animation
+  // Extract only digits for CountUp
   const numericValue = value.replace(/[^\d]/g, "");
 
-  // Keep only suffix symbols like "+" but remove ₹ or $
-  const suffix = value.replace(/[\d.,₹$]/g, "");
+  // Keep only suffix symbols like "+" or "Millions"
+  const suffix = value.replace(/[\d.,$]/g, "").trim();
 
-  const isCurrency = value.includes("₹") || value.includes("$");
+  // Add $ only for revenue
+  const isRevenue = label.toLowerCase().includes("revenue");
 
   return (
     <div
@@ -48,13 +49,13 @@ const StatCard = ({ value, label }: { value: string; label: string }) => {
         <p className="text-[50px] leading-tight font-semibold text-text-primary">
           {startCount ? (
             <>
-              {isCurrency && "₹"}
+              {isRevenue && "$"}
               <CountUp
                 end={parseInt(numericValue)}
                 duration={2.5}
                 separator=","
               />
-              {suffix}
+              {suffix && ` ${suffix}`}
             </>
           ) : (
             "0"
@@ -85,21 +86,29 @@ const StatsSection = () => {
                 }
                 `}
       </style>
-      <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
-        <div className="bg-[rgba(53,58,82,0.4)] border border-border/50 rounded-full px-4 py-2 inline-block">
+      <div className="flex flex-col items-center text-center">
+        {/* Top badge */}
+        <div className="bg-[rgba(53,58,82,0.4)] border border-border/50 rounded-full px-4 py-2 top-2">
           <p className="text-lg text-text-secondary">Results & Analytics</p>
         </div>
-        <div
-          className=" bg-black/30 backdrop-blur-2xl border border-white/30 
-      rounded-full shadow-lg p-4 relative z-20"
+
+        {/* Main heading */}
+        <h2
+          className="px-7 pt-7 pb-3 text-4xl md:text-5xl font-bold leading-tight md:leading-[56px]
+      bg-black/30 backdrop-blur-2xl border border-white/30 
+      rounded-full shadow-lg"
         >
-          <h2 className="text-5xl font-light text-text-primary">
-            Why{" "}
-            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-light" style={{fontFamily:"Roman", fontStyle:"italic"}}>
-              Choose us?
-            </span>
-          </h2>
-        </div>
+          Why{" "}
+          <span
+            className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold"
+            style={{
+              fontFamily: "Times New Roman, serif",
+              fontStyle: "italic",
+            }}
+          >
+            Choose us?
+          </span>
+        </h2>
       </div>
 
       <div className="relative max-w-7xl mx-auto mt-20">

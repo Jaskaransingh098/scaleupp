@@ -35,10 +35,9 @@ export default function StarfieldBackground() {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {/* Wrap with a large container that scrolls diagonally */}
       <div className="absolute w-[200%] h-[200%] animate-diagonal-loop">
-        {/* first grid */}
-        <div className="absolute inset-0 z-0">
+        {/* First tile */}
+        <div className="absolute inset-0">
           {stars.map((star) => (
             <div
               key={`a-${star.id}`}
@@ -48,14 +47,14 @@ export default function StarfieldBackground() {
                 top: `${star.y}%`,
                 width: `${star.size}px`,
                 height: `${star.size}px`,
-                opacity: 0.3,
+                opacity: 0.4,
               }}
             />
           ))}
         </div>
 
-        {/* second grid (offset) */}
-        <div className="absolute inset-0 translate-x-1/2 translate-y-1/2">
+        {/* Second tile offset for seamless loop */}
+        <div className="absolute inset-0 left-1/2 top-1/2">
           {stars.map((star) => (
             <div
               key={`b-${star.id}`}
@@ -65,7 +64,7 @@ export default function StarfieldBackground() {
                 top: `${star.y}%`,
                 width: `${star.size}px`,
                 height: `${star.size}px`,
-                opacity: 0.8,
+                opacity: 0.4,
               }}
             />
           ))}

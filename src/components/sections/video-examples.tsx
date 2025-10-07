@@ -46,10 +46,10 @@ const VideoExamples = () => {
   return (
     <section
       id="video-examples"
-      className="relative w-full bg-background py-[0px] overflow-hidden z-20"
+      className="relative w-full py-[0px] overflow-hidden z-20"
     >
       {/* === Background Decorations === */}
-      <Image
+      {/* <Image
         src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/JmnNBcgGwOAnsO70g5notRa1v1k-17.svg?"
         alt="Left Side Background"
         width={622}
@@ -64,7 +64,7 @@ const VideoExamples = () => {
         height={1121}
         className="absolute top-[0px] right-[-212px] z-[1] hidden lg:block pointer-events-none"
         unoptimized
-      />
+      /> */}
 
       {/* === Long-Form Section === */}
       <div className="container relative z-10 py-[0px]">
@@ -119,7 +119,7 @@ const VideoExamples = () => {
 
         {/* === Short-Form Section === */}
         <div className="flex flex-col items-center gap-6 text-center mt-[120px]">
-          <Image
+          {/* <Image
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/JmnNBcgGwOAnsO70g5notRa1v1k-17.svg?"
             alt="Left Side Background Bottom"
             width={622}
@@ -134,7 +134,7 @@ const VideoExamples = () => {
             height={1121}
             className="absolute bottom-0 right-[-212px] z-[0] hidden lg:block pointer-events-none scale-y-[1]"
             unoptimized
-          />
+          /> */}
           <h2 className="text-5xl font-semibold leading-[56px] text-text-primary">
             Short-Form
             <br />

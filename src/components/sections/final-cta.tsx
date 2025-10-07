@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { X, Check } from "lucide-react";
 
 const features = [
   { text: "24/7 support" },
@@ -26,18 +27,39 @@ const FinalCtaSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div
           className="inline-block bg-black/30 backdrop-blur-2xl border border-white/30 
-  rounded-full shadow-lg px-6 py-4 mx-auto"
+  rounded-full shadow-lg px-10 py-5 mx-auto text-center"
         >
-          <h1 className="text-[50px] font-semibold leading-[60px] text-text-primary text-center whitespace-nowrap">
-            Stop posting.
-          </h1>
-          <h1 className="text-[50px] font-semibold leading-[60px] text-center whitespace-nowrap">
-            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold" style={{
-                      fontFamily: "Times New Roman, serif",
-                      fontStyle: "italic",
-                    }}>
-              Start selling.
+          <h1 className="flex items-center justify-center gap-0 text-[50px] font-bold leading-[60px] text-text-primary whitespace-nowrap">
+            Stop posting
+            <X
+              className="w-20 h-20 stroke-[2.5]"
+              style={{
+                // stroke: "url(#grad)",
+                fill: "white",
+              }}
+            />
+            <span
+              className="ml-6 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold italic"
+              style={{ fontFamily: "Times New Roman, serif" }}
+            >
+              Start selling
             </span>
+            <Check
+              className="w-20 h-20 stroke-[2.5]"
+              style={{
+                stroke: "url(#grad)",
+                fill: "transparent",
+              }}
+            />
+            {/* gradient definition */}
+            <svg width="0" height="0">
+              <defs>
+                <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+                  <stop stopColor="#d38312" offset="0%" />
+                  <stop stopColor="#a83279" offset="100%" />
+                </linearGradient>
+              </defs>
+            </svg>
           </h1>
         </div>
 
@@ -45,7 +67,7 @@ const FinalCtaSection = () => {
           <div className="relative p-[1px] ">
             <div className="bg- rounded-[19px] p-10 flex flex-col items-center">
               <h2 className="text-[40px] font-semibold leading-[48px] text-text-primary text-center">
-                Get your free strategy audit now!
+                Get your free strategy audit
               </h2>
               <p className="mt-2.5 text-base text-secondary-foreground text-center">
                 And see how The Social Selling System™ can fill your calendar
@@ -73,10 +95,9 @@ const FinalCtaSection = () => {
               <div className="relative mt-10 w-fit">
                 {/* Calendly Embed */}
                 <div
-  className="calendly-inline-widget w-full md:w-[1030px] h-[900px] md:h-[900px] mx-auto"
-  data-url="https://calendly.com/aevolabs/30min?primary_color=8a15a0"
-/>
-
+                  className="calendly-inline-widget w-full md:w-[1030px] h-[900px] md:h-[900px] mx-auto"
+                  data-url="https://calendly.com/aevolabs/30min?primary_color=8a15a0"
+                />
 
                 {/* CTA Button */}
                 {/* <Link

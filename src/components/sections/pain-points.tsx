@@ -37,35 +37,43 @@ const PainPoints = () => {
   return (
     <section className="relative z-10 pt-10 pb-30 bg-transparent text-white ">
       <div className="container mx-auto px-6 z-20">
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center relative mb-16">
+          {/* The Solution pill */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/30 px-4 py-2"
+            className="absolute left-1/2 -translate-x-1/2 -top-5
+               inline-flex items-center gap-2 
+               rounded-full bg-[linear-gradient(to_right,rgba(211,131,18,0.3),rgba(168,50,121,0.3))] 
+               backdrop-blur-sm px-4 py-2 border border-white/30 shadow-md z-30"
           >
             <span className="text-sm font-medium text-white">The Solution</span>
           </motion.div>
-        </div>
-        <div className="text-center mb-16">
-          <h2
-            className="inline-block px-6 py-3 text-4xl md:text-5xl font-light leading-tight md:leading-[56px] 
+
+          {/* The Social Selling System */}
+          <div className="text-center">
+            <h2
+              className="inline-block px-7 pt-7 py-3 text-4xl md:text-5xl font-bold leading-tight md:leading-[56px] 
       bg-black/30 backdrop-blur-2xl border border-white/30 
       rounded-full shadow-lg"
-          >
-            The Social{" "}
-            <span
-              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-light"
-              style={{
-                fontFamily: "Times New Roman, serif",
-                fontStyle: "italic",
-              }}
             >
-              Selling System™
-            </span>
-          </h2>
-          <p className="pt-7 text-2xl">A 111-day content funnel that:</p>
+              The Social{" "}
+              <span
+                className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold"
+                style={{
+                  fontFamily: "Times New Roman, serif",
+                  fontStyle: "italic",
+                }}
+              >
+                Selling System™
+              </span>
+            </h2>
+
+            <p className="pt-7 text-2xl">A 111-day content funnel that:</p>
+          </div>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 z-30">
           {painPointsData.map((point, index) => {
             const Icon = point.icon;

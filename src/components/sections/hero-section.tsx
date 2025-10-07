@@ -210,42 +210,86 @@ const HeroSection = () => {
         </div> */}
         <div className="container relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
           <div className="pt-60 flex flex-col items-center gap-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-[45px] font-light text-text-primary leading-tight tracking-[-0.02em] max-w-5xl">
-              You don’t need “more content.” You need clients. That’s why we
-              built - <br />{" "}
-              <span className="pt-2 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent" style={{fontFamily:"Roman", fontStyle:"italic"}}>
+            <h1 className="text-4xl sm:text-4xl lg:text-[65px] font-bold text-text-primary leading-tight tracking-[-0.02em] max-w-9xl">
+              You don’t need “more content.” <br />
+              You need clients. That’s why we built - <br />{" "}
+              <span
+                className="pt-2 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent"
+                style={{ fontFamily: "Roman", fontStyle: "italic" }}
+              >
                 The Social Selling System™
               </span>
-              <span className="inline-flex items-center justify-center flex-wrap gap-x-10 gap-y-5 mt-10">
-                {icons.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors text-7xl"
-                    style={{
-                      color:
-                        "linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      display: "inline-block",
-                    }}
-                  >
-                    {item.icon}
-                  </a>
-                ))}
-                <span className="font-light">
-                  A{" "}
-                  <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent" style={{fontFamily:"Roman", fontStyle:"italic"}}>
-                    plug-and-play
-                  </span>{" "}
-                  YouTube + short-form system that fills your calendar with{" "}
-                  <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent " style={{fontFamily:"Roman", fontStyle:"italic"}}>
-                    ready-to-buy
-                  </span>{" "}
-                  leads.
-                </span>
+              <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden border border-border bg-black/40 backdrop-blur-sm mt-9 mb-10 shadow-2xl shadow-black/30 group">
+                {/* Video */}
+                <video
+                  ref={videoRef}
+                  src="/hero-video1.mp4"
+                  className="w-full h-full object-cover"
+                  loop={!isPreview}
+                  onTimeUpdate={handleTimeUpdate}
+                />
+
+                {/* Controls Overlay */}
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Timeline */}
+                  {!isPreview && (
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value={progress}
+                      onChange={handleSeek}
+                      className="w-full h-1 appearance-none bg-white/20 rounded-full accent-white cursor-pointer mb-3"
+                    />
+                  )}
+
+                  {/* Buttons */}
+                  <div className="flex items-center justify-between px-5 pb-4">
+                    <button
+                      onClick={handlePlay}
+                      className="text-white hover:scale-110 transition-transform"
+                    >
+                      {isPlaying ? <Pause size={28} /> : <Play size={28} />}
+                    </button>
+
+                    {!isPreview && (
+                      <button
+                        onClick={toggleMute}
+                        className="text-white hover:scale-110 transition-transform"
+                      >
+                        {muted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Center Play button during preview */}
+                {isPreview && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button
+                      onClick={handlePlay}
+                      className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-md p-5 rounded-full transition-all duration-300"
+                    >
+                      <Play size={36} />
+                    </button>
+                  </div>
+                )}
+              </div>
+              <span className="items-center justify-center flex-wrap gap-x-20 gap-y-9 mt-17">
+                <div className="text-4xl">
+                  <span className="font-light">
+                    A{" "}
+                    <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent">
+                      plug-and-play
+                    </span>{" "}
+                    YouTube + short-form system that <br /> fills your calendar
+                    with{" "}
+                    <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent ">
+                      ready-to-buy
+                    </span>{" "}
+                    leads.
+                  </span>
+                </div>
                 in 111 days
               </span>
             </h1>
@@ -255,72 +299,15 @@ const HeroSection = () => {
               dime on paid ads, or creating boring content
             </p>
 
-            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden border border-border bg-black/40 backdrop-blur-sm shadow-2xl shadow-black/30 group">
-              {/* Video */}
-              <video
-                ref={videoRef}
-                src="/hero-video1.mp4"
-                className="w-full h-full object-cover"
-                loop={!isPreview}
-                onTimeUpdate={handleTimeUpdate}
-              />
-
-              {/* Controls Overlay */}
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {/* Timeline */}
-                {!isPreview && (
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={progress}
-                    onChange={handleSeek}
-                    className="w-full h-1 appearance-none bg-white/20 rounded-full accent-white cursor-pointer mb-3"
-                  />
-                )}
-
-                {/* Buttons */}
-                <div className="flex items-center justify-between px-5 pb-4">
-                  <button
-                    onClick={handlePlay}
-                    className="text-white hover:scale-110 transition-transform"
-                  >
-                    {isPlaying ? <Pause size={28} /> : <Play size={28} />}
-                  </button>
-
-                  {!isPreview && (
-                    <button
-                      onClick={toggleMute}
-                      className="text-white hover:scale-110 transition-transform"
-                    >
-                      {muted ? <VolumeX size={24} /> : <Volume2 size={24} />}
-                    </button>
-                  )}
-                </div>
-              </div>
-
-              {/* Center Play button during preview */}
-              {isPreview && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button
-                    onClick={handlePlay}
-                    className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-md p-5 rounded-full transition-all duration-300"
-                  >
-                    <Play size={36} />
-                  </button>
-                </div>
-              )}
-            </div>
-
             <Link
               href="#contact"
-              className="inline-block mb-6 px-8 py-4 text-base font-medium 
-             text-white bg-white/20 backdrop-blur-2xl 
-             border border-white/30 
-             rounded-xl shadow-lg 
-             hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="inline-block mb-6 px-8 py-4 text-base font-medium text-white
+             bg-[linear-gradient(to_right,rgba(211,131,18,0.3),rgba(168,50,121,0.3))]
+             backdrop-blur-xlg
+             rounded-xl shadow-md hover:shadow-xl 
+             transition-all duration-300 transform hover:-translate-y-1"
             >
-              Get The System (Free Audit Call)
+              Get The System <br /> (Free Audit Call)
             </Link>
           </div>
         </div>

@@ -16,7 +16,7 @@ interface Founder {
   socials: SocialItem[];
 }
 const card1Data = {
-  name: "Madhav Singhla",
+  name: "Madhav Singla",
   title: "Co-Founder, Production & Ops",
   description:
     "Madhav left his job to pursue his passion for media, launching his own agency Madnis Media before co-founding Aevo Media Labs. With 3 years in video production and editing, he specializes in building efficient workflows — from batch recording sessions to multi-platform repurposing. His role ensures clients can record once and walk away with a full funnel of content.",
@@ -27,7 +27,7 @@ const card1Data = {
 
 // Data for a second, example card
 const card2Data = {
-  name: "Waleed",
+  name: "Waleed Fareed",
   title: "Co-Founder, Growth & Strategy",
   description:
     "Waleed has spent the past years building content systems end-to-end for agencies, founders, and consultants. From scripting to editing to scaling funnels, he’s refined the exact process that consistently drives inbound leads. At Aevo Media Labs, he focuses on strategy and growth — making sure every piece of content leads to qualified calls, not vanity metrics.",
@@ -74,7 +74,7 @@ export default function FoundersSection() {
             className="bg-black/30 backdrop-blur-2xl border border-white/30 
       rounded-full shadow-lg p-4"
           >
-            <h2 className="text-[48px] font-semibold text-text-primary leading-[56px]">
+            <h2 className="text-[48px] font-bold text-text-primary leading-[56px]">
               Meet our{" "}
               <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent font-bold" style={{
                       fontFamily: "Times New Roman, serif",

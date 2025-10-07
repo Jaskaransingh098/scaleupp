@@ -220,7 +220,7 @@
     color: var(--color-text-secondary);
     /* font-family: "Lora"; */
     font-weight: lighter;
-    
+
   }
 
   .text-lg {
@@ -281,12 +281,12 @@ nextjs-portal {
 }
 
 @keyframes diagonal-loop {
-  from {
-    transform: translate(0, 0);
+  0% {
+    transform: translate3d(0, 0, 0);
   }
 
-  to {
-    transform: translate(50%, 50%);
+  100% {
+    transform: translate3d(-50%, -50%, 0);
   }
 }
 
@@ -294,4 +294,3 @@ nextjs-portal {
   animation: diagonal-loop 120s linear infinite;
   will-change: transform;
 }
-

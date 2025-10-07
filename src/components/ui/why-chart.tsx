@@ -237,8 +237,11 @@ function whyChart() {
           {/* <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">
             WHY US — COMPARISON
           </h2> */}
-          <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
-            The Difference Is Clear
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            The Difference Is{" "}
+            <span className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent">
+              Clear
+            </span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Agencies make content. We make clients.
@@ -249,18 +252,16 @@ function whyChart() {
           <Table className="bg-transparent z-20">
             <TableHeader>
               <TableRow className="border-b-2 border-border hover:bg-transparent">
-                <TableHead className="w-1/3 text-base p-6">Feature</TableHead>
-                <TableHead className="w-1/3 text-base text-center">
-                  <div className="flex flex-col items-center gap-0">
-                    <X className="h-5 w-5 text-red-500" />
-                    <span>Generic Agency</span>
-                  </div>
+                <TableHead className="w-1/3 text-2xl p-6">Feature</TableHead>
+                <TableHead className="w-1/3 text-base text-left">
+                  <th className="flex items-center gap-1">
+                    <X className="h-10 w-10 text-red-500" />
+                    <span className="text-2xl">Generic Agency</span>
+                  </th>
                 </TableHead>
-                <TableHead className="w-1/3 text-base text-center">
-                  <div className="flex flex-col items-center gap-2">
-                    <Check className="h-5 w-5 text-emerald-500 top-13" />
-                    <span>The Social Selling System™</span>
-                  </div>
+                <TableHead className="w-auto text-2xl flex items-center gap-2 pt-7 whitespace-nowrap">
+                  <Check className="h-10 w-10 text-emerald-500" />
+                  <span>The Social Selling System™</span>
                 </TableHead>
               </TableRow>
             </TableHeader>

@@ -40,7 +40,7 @@ const InfoCards: React.FC<InfoCardProps> = ({
       {/* Content */}
       <div className="flex flex-col justify-between p-4 md:p-12 w-full md:w-1/2 bg-black/40 backdrop-blur-xl">
         <div>
-          <h2 className="text-2xl md:text-3xl font-light text-white">{name}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">{name}</h2>
           <p className="text-lg md:text-xl mt-1 bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent">
             {title}
           </p>

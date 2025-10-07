@@ -19,21 +19,26 @@ export default function HeaderNavigation() {
   const [open, setOpen] = useState(false);
   return (
     <header
-      className="absolute top-3 left-0 right-0 z-50 
-  bg-white/10 backdrop-blur-2xl 
-
-  border border-white/30 
-  rounded-full md:rounded-full
-  shadow-lg"
+      className="fixed top-3 left-0 right-0 z-50 
+  w-[70%] mx-auto
+  bg-white/10 backdrop-blur-xl
+ 
+  shadow-[0_4px_30px_rgba(255,255,255,0.2)]
+  rounded-full
+  transition-all duration-300"
     >
-      <div className="container mx-auto px-6">
-        <nav className="relative flex h-[97px] items-center justify-between">
-          <Link href="/" className="relative z-20">
+      <div className="container mx-auto -px-14">
+        <nav className="relative flex h-[77px] items-center justify-between ml-0 md:ml-0">
+          <Link
+            href="/"
+            className="relative z-20 flex items-center justify-start shrink-0 ml-0 md:-ml-10"
+          >
             <Image
-              src="https://framerusercontent.com/images/4GRC8ZY4DKVEmOKqBCV808B51Y.png"
+              src="/logo2.png"
               alt="ScaleUp Media Logo"
-              width={124}
-              height={40}
+              width={200}
+              height={800}
+              className="h-[130px] object-contain"
               priority
             />
           </Link>
@@ -58,9 +63,12 @@ export default function HeaderNavigation() {
           <div className="relative z-20 hidden md:block">
             <a
               href="#contact"
-              className="bg-gray-800 md:rounded-full shadow-lg px-8 py-4"
+              className="bg-gradient-to-r via-[#d38312] to-[#a83279]  md:rounded-full px-8 py-4"
             >
-              <span className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent font-bold" style={{fontFamily:"Roman", fontStyle:"italic"}}>
+              <span
+                className="text-white font-bold"
+                style={{ fontFamily: "Space Grotesk", fontStyle: "" }}
+              >
                 Apply To Work With Us
               </span>
             </a>
