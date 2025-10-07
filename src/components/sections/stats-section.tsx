@@ -42,7 +42,7 @@ const StatCard = ({ value, label }: { value: string; label: string }) => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col items-center justify-center p-8 bg-card border border-border rounded-3xl overflow-hidden text-center min-h-[200px]"
+      className="relative flex flex-col items-center justify-center p-8  bg-white/5 backdrop-blur-sm rounded-3xl hover:bg-white/10 transition-all duration-300 overflow-hidden text-center min-h-[200px]"
     >
       <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
       <div className="relative z-10 flex flex-col gap-2">

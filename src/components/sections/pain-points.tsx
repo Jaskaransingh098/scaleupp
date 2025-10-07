@@ -80,7 +80,7 @@ const PainPoints = () => {
             return (
               <div
                 key={index}
-                className="relative bg-card border border-border rounded-3xl p-8 overflow-hidde h-full"
+                className="relative  bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 border border-border rounded-3xl p-8 overflow-hidde h-full"
               >
                 {/* <Image
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/WcrHWFTN7cBpOOCJ3uhVkpsJXQ-4.svg?"
@@ -98,7 +98,7 @@ const PainPoints = () => {
                     <h3 className="text-2xl font-semibold text-text-primary leading-7">
                       {point.title}
                     </h3>
-                    <p className="text-text-secondary text-base">
+                    <p className="text-text-secondary text-white">
                       {point.description}
                     </p>
                   </div>
