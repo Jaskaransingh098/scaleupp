@@ -294,3 +294,14 @@ nextjs-portal {
   animation: diagonal-loop 120s linear infinite;
   will-change: transform;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

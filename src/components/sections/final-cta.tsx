@@ -29,29 +29,30 @@ const FinalCtaSection = () => {
           className="inline-block bg-black/30 backdrop-blur-2xl border border-white/30 
   rounded-full shadow-lg px-10 py-5 mx-auto text-center"
         >
-          <h1 className="flex items-center justify-center gap-0 text-[50px] font-bold leading-[60px] text-text-primary whitespace-nowrap">
+          <h1
+            className="
+    flex flex-wrap items-center justify-center gap-2 
+    text-[32px] sm:text-[40px] md:text-[50px] 
+    font-bold leading-[38px] sm:leading-[48px] md:leading-[60px] 
+    text-text-primary text-center
+  "
+          >
             Stop posting
             <X
-              className="w-20 h-20 stroke-[2.5]"
-              style={{
-                // stroke: "url(#grad)",
-                fill: "white",
-              }}
+              className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 stroke-[2.5]"
+              style={{ fill: "white" }}
             />
             <span
-              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent text-[55px] font-bold italic"
+              className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent 
+    text-[34px] sm:text-[44px] md:text-[55px] font-bold italic"
               style={{ fontFamily: "Times New Roman, serif" }}
             >
               Start selling
             </span>
             <Check
-              className="w-20 h-20 stroke-[2.5]"
-              style={{
-                stroke: "url(#grad)",
-                fill: "transparent",
-              }}
+              className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 stroke-[2.5]"
+              style={{ stroke: "url(#grad)", fill: "transparent" }}
             />
-            {/* gradient definition */}
             <svg width="0" height="0">
               <defs>
                 <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
@@ -76,8 +77,6 @@ const FinalCtaSection = () => {
                   free strategy audit
                 </span>
               </h2>
-
-              
 
               <p className="mt-2.5 text-base text-secondary-foreground text-center">
                 And see how The Social Selling System™ can fill your calendar

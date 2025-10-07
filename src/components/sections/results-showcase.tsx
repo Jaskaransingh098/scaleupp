@@ -46,7 +46,11 @@ const ResultsShowcase = () => {
 
       <div className="relative z-20 container mx-auto px-6">
         <div className="text-center mb-12 lg:mb-20">
-          <h2 className="text-4xl lg:text-[48px] lg:leading-[56px] font-bold text-white">
+          <h2
+            className="text-4xl lg:text-[48px] lg:leading-[56px] font-bold text-white 
+  bg-white/10 backdrop-blur-md border border-white/20 
+  rounded-full px-6 py-4 inline-block shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          >
             We Actually{" "}
             <span
               className="bg-[linear-gradient(to_right,#d38312,#a83279)] bg-clip-text text-transparent text-6xl font-bold"

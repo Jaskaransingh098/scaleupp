@@ -43,6 +43,21 @@ const shortFormVideos = [
 const VideoExamples = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
+  React.useEffect(() => {
+    const el = document.getElementById("shortScroll");
+    if (!el) return;
+
+    const interval = setInterval(() => {
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: 400, behavior: "smooth" });
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="video-examples"
@@ -69,10 +84,12 @@ const VideoExamples = () => {
       {/* === Long-Form Section === */}
       <div className="container relative z-10 py-[0px]">
         <div className="flex py-[60px] flex-col items-center gap-6 text-center mb-16">
-          <h2 className="text-5xl font-semibold leading-[56px] text-text-primary">
-            Long-Form
-            <br />
-            Video Examples
+          <h2
+            className="text-5xl font-semibold leading-[56px] text-white 
+    bg-white/10 backdrop-blur-md border border-white/20 
+    rounded-full px-8 py-4 inline-block shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          >
+            Long-Form <br /> Video Examples
           </h2>
           <p className="max-w-xl text-lg text-text-secondary">
             Get more leads without sending 1000s cold emails/day, spending a
@@ -119,48 +136,59 @@ const VideoExamples = () => {
 
         {/* === Short-Form Section === */}
         <div className="flex flex-col items-center gap-6 text-center mt-[120px]">
-          {/* <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/JmnNBcgGwOAnsO70g5notRa1v1k-17.svg?"
-            alt="Left Side Background Bottom"
-            width={622}
-            height={1118}
-            className="absolute bottom-0 left-[-188px] z-[1] hidden lg:block pointer-events-none scale-y-[1]"
-            unoptimized
-          />
-          <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5ccec89d-7959-4c39-bc21-7fb146605244-scaleupmedia-in/assets/svgs/XUV3B79RFYJmks4RdcuhqtsLo1k-16.svg?"
-            alt="Right Side Background Bottom"
-            width={590}
-            height={1121}
-            className="absolute bottom-0 right-[-212px] z-[0] hidden lg:block pointer-events-none scale-y-[1]"
-            unoptimized
-          /> */}
-          <h2 className="text-5xl font-semibold leading-[56px] text-text-primary">
-            Short-Form
-            <br />
-            Video Examples
+          <h2
+            className="text-5xl font-semibold leading-[56px] text-white 
+    bg-white/10 backdrop-blur-md border border-white/20 
+    rounded-full px-8 py-4 inline-block shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          >
+            Short-Form <br /> Video Examples
           </h2>
         </div>
 
-        {/* === Short-Form Video Grid === */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-16 pb-0 
-                sm:px-78 px-0 justify-center relative z-20"
-        >
-          {shortFormVideos.map((video) => (
-            <div
-              key={video.id}
-              className="max-w-[384px] w-full mx-auto rounded-[20px] overflow-hidden aspect-[9/16]"
-            >
-              <iframe
-                className="w-full h-full border-0"
-                src={`https://www.youtube.com/embed/${video.id}?rel=0&controls=1&autoplay=0&mute=0&loop=0&fs=1&color=red`}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          ))}
+        {/* === Short-Form Horizontal Scroll === */}
+        <div className="relative mt-16">
+          {/* Scroll Buttons */}
+          <button
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full"
+            onClick={() => {
+              document
+                .getElementById("shortScroll")
+                ?.scrollBy({ left: -400, behavior: "smooth" });
+            }}
+          >
+            ‹
+          </button>
+          <button
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full"
+            onClick={() => {
+              document
+                .getElementById("shortScroll")
+                ?.scrollBy({ left: 400, behavior: "smooth" });
+            }}
+          >
+            ›
+          </button>
+
+          {/* Scrollable Row */}
+          <div
+            id="shortScroll"
+            className="flex gap-6 overflow-x-auto no-scrollbar px-4 py-4 scroll-smooth"
+          >
+            {shortFormVideos.map((video) => (
+              <div
+                key={video.id}
+                className="flex-shrink-0 w-[320px] sm:w-[350px] md:w-[380px] rounded-[20px] overflow-hidden aspect-[9/16] mx-auto"
+              >
+                <iframe
+                  className="w-full h-full border-0"
+                  src={`https://www.youtube.com/embed/${video.id}?rel=0&controls=1&autoplay=0&mute=0&loop=0&fs=1`}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -109,7 +109,7 @@ const ProcessSection = () => {
   return (
     <section
       id="process"
-      className="relative z-20 bg-transparent py-32 overflow-hidden mt-[150px]"
+      className="relative z-20 bg-transparent py-32 overflow-hidden mt-[0px]"
     >
       {/* <video
         className="absolute inset-0 w-full h-full object-cover z-0"
